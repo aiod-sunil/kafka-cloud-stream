@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+#        source1-out-0:
+#          destination: test1
+#        source2-out-0:
+#          destination: test2
+        sink1-in-0:
+          destination: test1
+        sink2-in-0:
+          destination: test2
+      function:
+        definition: sink1;sink2
+#        definition: source1;source2;sink1;sink2
+server:
+  port: 0
